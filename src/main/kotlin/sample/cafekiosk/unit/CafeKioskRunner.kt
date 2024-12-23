@@ -2,6 +2,7 @@ package sample.cafekiosk.unit
 
 import sample.cafekiosk.unit.beverage.Americano
 import sample.cafekiosk.unit.beverage.Latte
+import java.time.LocalDateTime
 
 
 fun main(args: Array<String>) {
@@ -11,4 +12,7 @@ fun main(args: Array<String>) {
     cafeKiosk.add(Latte())
     println("라떼 추가")
     println("총 가격: ${cafeKiosk.calculateTotalPrice()}원")
+
+    cafeKiosk.createOrder(LocalDateTime.now())
+
 }
